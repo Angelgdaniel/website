@@ -1,0 +1,66 @@
+@import url(./root.css);
+@import url(./loader.css);
+@import url(./scrollBar.css);
+@import url(./reveal-img.css);
+@import url(./header.css);
+@import url(./main.css);
+@import url(./footer.css);
+
+.education-title {
+  margin-bottom: 1rem;
+  font-family: methanerse;
+  font-size: var(--font-0);
+  letter-spacing: 0.15rem;
+  color: var(--aqua);
+  text-align: center;
+}
+
+#vertical-carousel {
+  width: clamp(15rem, 80%, 70rem);
+  border-radius: 1rem;
+}
+
+.splide__slide {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.img-splide {
+  width: 100%;
+  border-radius: 1rem;
+  transition: -webkit-filter 0.4s ease;
+  transition: filter 0.4s ease;
+  transition: filter 0.4s ease, -webkit-filter 0.4s ease;
+}
+
+.splide__slide.is-active {
+  transform: scale(1.1);
+  opacity: 1;
+  z-index: 5;
+}
+
+.splide__slide:not(.is-active) {
+  transform: scale(0.9);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.splide__pagination__page {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.splide__pagination__page.is-active {
+  background-color: var(--aqua);
+}
+
+.splide__arrow {
+  background-color: var(--black);
+}
+
+.splide__arrow svg {
+  fill: var(--aqua);
+}

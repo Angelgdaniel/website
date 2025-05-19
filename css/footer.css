@@ -1,0 +1,13 @@
+footer {
+  background-color: var(--black);
+  border-top: 2px solid var(--aqua-alpha);
+  margin-top: auto;
+  flex: 0 0 auto;
+}
+
+.footer-text {
+  margin: 1rem 0;
+  font-family: var(--lucida-sans);
+  font-size: var(--font--1);
+  text-align: center;
+}

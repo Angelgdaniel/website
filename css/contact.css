@@ -1,0 +1,253 @@
+@import url(./root.css);
+@import url(./loader.css);
+@import url(./scrollBar.css);
+@import url(./reveal-img.css);
+@import url(./header.css);
+@import url(./main.css);
+@import url(./footer.css);
+
+.contact-title {
+  font-family: methanerse;
+  font-size: var(--font-0);
+  letter-spacing: 0.15rem;
+  color: var(--aqua);
+  margin: 1rem 0 1rem 0;
+}
+
+.contact-content {
+  width: clamp(15rem, 80%, 70rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  margin-bottom: 1rem;
+}
+
+.container-cube {
+  position: relative;
+  width: 30%;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cube-rotate {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  -webkit-animation: animate 4s linear infinite;
+  animation: animate 4s linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0);
+  }
+
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0);
+  }
+
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+.cube-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.cube-span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(calc(90deg * var(--i))) translateZ(37.5px);
+  background: var(--aqua) 100%;
+}
+
+.cube-top {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background: var(--aqua) 100%;
+  transform: rotateX(90deg) translateZ(37.5px);
+  transform-style: preserve-3d;
+}
+
+.holo {
+  position: absolute;
+  z-index: -1;
+  width: 100px;
+  height: 10px;
+  bottom: -10px;
+  margin: 0 auto;
+  background-color: var(--aqua-alpha);
+  border-radius: 50%;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+  transform: perspective(100px) rotateX(-30deg);
+  transform-style: preserve-3d;
+  -webkit-animation: holographic 1.5s infinite alternate;
+  animation: holographic 1.5s infinite alternate;
+}
+
+.holo::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  height: 10px;
+  background-color: var(--aqua-alpha);
+  border-radius: 50%;
+  -webkit-filter: blur(2.5px);
+  filter: blur(2.5px);
+}
+
+@-webkit-keyframes holographic {
+  from {
+    box-shadow: 0 -75px 5px rgba(0, 252, 252, 0.15),
+      0 -1px 2px rgba(0, 252, 252, 0.5), 0 -45px 5px rgba(0, 252, 252, 0.15),
+      0 -2px 3px rgba(0, 252, 252, 0.5), 0 -3px 4px rgba(0, 252, 252, 0.5),
+      0 -4px 6px rgba(0, 252, 252, 0.5), 0 -5px 10px rgba(0, 252, 252, 0.75),
+      0 -7px 20px rgba(0, 252, 252, 0.75), 0 -10px 30px rgba(0, 252, 252, 0.75),
+      0 -15px 40px rgba(0, 252, 252, 0.75), 0 -25px 50px rgba(0, 252, 252, 0.75),
+      0 -35px 60px rgba(0, 252, 252, 0.85), 0 -45px 70px rgba(0, 252, 252, 0.95),
+      0 -65px 80px rgba(0, 252, 252, 1), 0 -75px 90px rgba(0, 252, 252, 1);
+  }
+
+  to {
+    box-shadow: 0 -1px 5px rgba(0, 252, 252, 0.15),
+      0 -1px 2px rgba(0, 252, 252, 0.5), 0 -1px 5px rgba(0, 252, 252, 0.15),
+      0 -2px 3px rgba(0, 252, 252, 0.5), 0 -3px 4px rgba(0, 252, 252, 0.5),
+      0 -4px 6px rgba(0, 252, 252, 0.5), 0 -5px 7px rgba(0, 252, 252, 0.75),
+      0 -7px 10px rgba(0, 252, 252, 0.75), 0 -10px 15px rgba(0, 252, 252, 0.75),
+      0 -15px 20px rgba(0, 252, 252, 0.75), 0 -25px 25px rgba(0, 252, 252, 0.75),
+      0 -35px 30px rgba(0, 252, 252, 0.85), 0 -45px 35px rgba(0, 252, 252, 0.95),
+      0 -65px 40px rgba(0, 252, 252, 1), 0 -75px 50px rgba(0, 252, 252, 1);
+  }
+}
+
+@keyframes holographic {
+  from {
+    box-shadow: 0 -75px 5px rgba(0, 252, 252, 0.15),
+      0 -1px 2px rgba(0, 252, 252, 0.5), 0 -45px 5px rgba(0, 252, 252, 0.15),
+      0 -2px 3px rgba(0, 252, 252, 0.5), 0 -3px 4px rgba(0, 252, 252, 0.5),
+      0 -4px 6px rgba(0, 252, 252, 0.5), 0 -5px 10px rgba(0, 252, 252, 0.75),
+      0 -7px 20px rgba(0, 252, 252, 0.75), 0 -10px 30px rgba(0, 252, 252, 0.75),
+      0 -15px 40px rgba(0, 252, 252, 0.75), 0 -25px 50px rgba(0, 252, 252, 0.75),
+      0 -35px 60px rgba(0, 252, 252, 0.85), 0 -45px 70px rgba(0, 252, 252, 0.95),
+      0 -65px 80px rgba(0, 252, 252, 1), 0 -75px 90px rgba(0, 252, 252, 1);
+  }
+
+  to {
+    box-shadow: 0 -1px 5px rgba(0, 252, 252, 0.15),
+      0 -1px 2px rgba(0, 252, 252, 0.5), 0 -1px 5px rgba(0, 252, 252, 0.15),
+      0 -2px 3px rgba(0, 252, 252, 0.5), 0 -3px 4px rgba(0, 252, 252, 0.5),
+      0 -4px 6px rgba(0, 252, 252, 0.5), 0 -5px 7px rgba(0, 252, 252, 0.75),
+      0 -7px 10px rgba(0, 252, 252, 0.75), 0 -10px 15px rgba(0, 252, 252, 0.75),
+      0 -15px 20px rgba(0, 252, 252, 0.75), 0 -25px 25px rgba(0, 252, 252, 0.75),
+      0 -35px 30px rgba(0, 252, 252, 0.85), 0 -45px 35px rgba(0, 252, 252, 0.95),
+      0 -65px 40px rgba(0, 252, 252, 1), 0 -75px 50px rgba(0, 252, 252, 1);
+  }
+}
+
+.contact-form {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form label {
+  font-family: var(--lucida-sans);
+  font-size: var(--font--1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  border: 1px solid var(--aqua-alpha);
+  background-color: var(--black);
+  border-radius: 0.5rem;
+  font-family: var(--lucida-sans);
+  font-size: var(--font--1);
+  width: 100%;
+  color: var(--white);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--aqua) var(--black);
+}
+
+.contact-form textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.contact-form textarea::-webkit-scrollbar-track {
+  background: var(--aqua);
+}
+
+.contact-form textarea::-webkit-scrollbar-thumb {
+  background-color: var(--black);
+  border-radius: 50%;
+  border: 2px solid var(--aqua);
+}
+
+.contact-form textarea::-webkit-scrollbar-thumb:hover {
+  background-color: var(--black);
+  cursor: pointer;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--aqua-alpha);
+  box-shadow: none;
+}
+
+.contact-form button {
+  background-color: var(--aqua);
+  color: var(--black);
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: var(--lucida-sans);
+  font-size: var(--font--1);
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--aqua-alpha);
+  color: var(--white);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .container-cube {
+    height: 12rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}

@@ -1,0 +1,65 @@
+@import url(./root.css);
+@import url(./loader.css);
+@import url(./scrollBar.css);
+@import url(./reveal-img.css);
+@import url(./header.css);
+@import url(./main.css);
+@import url(./footer.css);
+
+.blog-post {
+  margin: 0 auto;
+  width: clamp(15rem, 80%, 70rem);
+}
+
+.blog-title {
+  font-family: methanerse;
+  font-size: var(--font-0);
+  letter-spacing: 0.15rem;
+  color: var(--aqua);
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.blog-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-image img {
+  width: 70%;
+  height: 20rem;
+  border-radius: 0.5rem;
+}
+
+.image-caption {
+  color: var(--aqua-alpha);
+  margin-top: 0.5rem;
+  font-family: var(--lucida-sans);
+  font-size: var(--font--2);
+  line-height: 1.5;
+}
+
+.blog-excerpt {
+  margin-top: 1rem;
+}
+
+.blog-description {
+  font-family: var(--lucida-sans);
+  font-size: var(--font--1);
+  line-height: 1.5;
+}
+
+.read-more-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--aqua);
+  text-decoration: none;
+  font-family: var(--lucida-sans);
+  font-size: var(--font--1);
+  line-height: 1.5;
+}
+
+.read-more-link:hover {
+  text-decoration: underline;
+}

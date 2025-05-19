@@ -1,0 +1,29 @@
+@import url(./root.css);
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--aqua);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--black);
+  border-radius: 50%;
+  border: 2px solid var(--aqua);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: var(--black);
+  cursor: pointer;
+}
+
+/* Firefox */
+
+.html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--aqua) var(--black);
+}

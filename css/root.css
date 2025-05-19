@@ -1,0 +1,75 @@
+/* Tipografía titulos */
+
+@font-face {
+  font-family: "methanerse";
+  src: url("../assets/fonts/methanerse.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* Tipografía textos */
+
+  --lucida-sans: "Lucida Sans Unicode";
+
+  /* Colores principales */
+
+  --black: #000000;
+  --white: #ffffff;
+  --aqua: #00ffff;
+  --aqua-alpha: #00ffff33;
+
+  /* Tipografía responsive */
+  
+  /* 10.4167px → 10.24px */
+  --font--3: clamp(0.64rem, 0.6526rem + -0.0072vw, 0.651rem);
+  /* 12.5px → 12.8px */
+  --font--2: clamp(0.7813rem, 0.7786rem + 0.0122vw, 0.8rem);
+  /* 15px → 16px */
+  --font--1: clamp(0.9375rem, 0.9286rem + 0.0408vw, 1rem);
+  /* 18px → 20px */
+  --font-0: clamp(1.125rem, 1.1071rem + 0.0816vw, 1.25rem);
+  /* 21.6px → 25px */
+  --font-1: clamp(1.35rem, 1.3196rem + 0.1388vw, 1.5625rem);
+  /* 25.92px → 31.25px */
+  --font-2: clamp(1.62rem, 1.5724rem + 0.2176vw, 1.9531rem);
+  /* 31.104px → 39.0625px */
+  --font-3: clamp(1.944rem, 1.8729rem + 0.3248vw, 2.4414rem);
+}
+
+/* Reset básico para navegadores */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Contenedor responsive */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0.3rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  padding: 1rem;
+  border: 2px solid var(--aqua);
+  border-radius: 0.5rem;
+  background-color: var(--black);
+  color: var(--white);
+  cursor: url(./../assets/images/cursor-futurista-angel-daniel-gutierrez-quiroga.png),
+    auto;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: var(--black);
+}
