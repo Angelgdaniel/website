@@ -1,5 +1,6 @@
 User-agent: *
-Disallow: /admin/   # Bloquea el acceso a la carpeta "admin"
-Disallow: /private/ # Bloquea contenido privado
+Disallow: 
 
-Sitemap: https://tudominio.com/sitemap.xml  # Indica dónde está el sitemap
+Allow: /
+
+Sitemap: https://angelgdaniel.github.io/website/sitemap.xml

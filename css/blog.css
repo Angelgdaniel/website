@@ -63,3 +63,7 @@
 .read-more-link:hover {
   text-decoration: underline;
 }
+
+.mb-1 {
+  margin-bottom: 1.5rem;
+}
