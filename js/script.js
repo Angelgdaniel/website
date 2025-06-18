@@ -55,6 +55,13 @@ document.addEventListener("DOMContentLoaded", function () {
         768: { height: "62vh", perPage: 1 },
       },
     }).mount();
+
+    const closeIcon = document.querySelector(".close-icon");
+
+    closeIcon?.addEventListener("click", () => {
+      const container = document.querySelector(".container-mini-img");
+      if (container) container.remove();
+    });
   }
 });
 
@@ -175,3 +182,24 @@ if (scrollToTopBtn) {
   window.addEventListener("scroll", handleScroll);
   scrollToTopBtn.addEventListener("click", scrollToTop);
 }
+
+function updateImageAndTextByViewport() {
+  const img = document.querySelector(".img-click");
+  const span = document.querySelector(".text-mini-img");
+
+  if (window.innerWidth <= 768) {
+    if (img && span) {
+      img.src = "./assets/images/hand-touch.png";
+      span.textContent = "Toca para descargar";
+    }
+  } else {
+    if (img && span) {
+      img.src = "./assets/images/arrow-click.png";
+      span.textContent = "Haz click para descargar";
+    }
+  }
+}
+
+updateImageAndTextByViewport();
+
+window.addEventListener("resize", updateImageAndTextByViewport);

@@ -108,7 +108,8 @@
 }
 
 .wrapper {
-  width: clamp(7rem, 60%, 20rem);
+  width: 60%;
+  max-width: 25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,10 +129,12 @@
   z-index: 5;
   border: none;
   background-color: var(--aqua);
+  color: var(--black);
   border-radius: 0.5rem;
   font-family: var(--lucida-sans);
   font-size: var(--font--1);
-  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
 }
 
 .project-button:hover {
@@ -151,4 +154,15 @@
 
 .card:nth-child(even) > .info > .title::before {
   right: -53px;
+}
+
+@media (max-width: 750px) {
+  .timeline {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
 }
