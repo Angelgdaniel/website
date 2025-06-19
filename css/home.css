@@ -29,10 +29,18 @@
   flex: 1;
 }
 
-.profession {
-  font-family: methanerse;
+.profession,
+.speciality,
+.skills,
+.contact-title {
   font-size: var(--font-0);
   letter-spacing: 0.15rem;
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.profession {
   margin-bottom: 0.8rem;
 }
 
@@ -68,9 +76,6 @@
 .speciality,
 .skills,
 .contact-title {
-  font-family: methanerse;
-  font-size: var(--font-0);
-  letter-spacing: 0.15rem;
   margin-bottom: 2rem;
   color: var(--aqua);
   text-align: center;

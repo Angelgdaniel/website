@@ -7,9 +7,11 @@
 @import url(./footer.css);
 
 .contact-title {
-  font-family: methanerse;
   font-size: var(--font-0);
   letter-spacing: 0.15rem;
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: var(--aqua);
   margin: 1rem 0 1rem 0;
 }
