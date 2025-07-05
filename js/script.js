@@ -190,12 +190,12 @@ function updateImageAndTextByViewport() {
   if (window.innerWidth <= 768) {
     if (img && span) {
       img.src = "./assets/images/hand-touch.png";
-      span.textContent = "Toca para descargar";
+      span.textContent = "Toca en el certificado para descargar";
     }
   } else {
     if (img && span) {
       img.src = "./assets/images/arrow-click.png";
-      span.textContent = "Haz click para descargar";
+      span.textContent = "Haz click en el certificado para descargar";
     }
   }
 }
