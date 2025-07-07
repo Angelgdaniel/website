@@ -203,3 +203,22 @@ function updateImageAndTextByViewport() {
 updateImageAndTextByViewport();
 
 window.addEventListener("resize", updateImageAndTextByViewport);
+
+const btn = document.getElementById('button');
+const form = document.getElementById('form');
+
+if (form) {
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    btn.value = 'Enviando...';
+    emailjs.sendForm("default_service", "template_6u6pkeh", this)
+      .then(() => {
+        btn.value = 'Mensaje enviado';
+        this.reset();
+        window.location.href = 'thank-page.html';
+      }, (err) => {
+        btn.value = 'Enviar mensaje';
+        alert(JSON.stringify(err));
+      });
+  });
+}
